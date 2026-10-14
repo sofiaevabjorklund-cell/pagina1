@@ -1,0 +1,502 @@
+[
+  {
+    "q": "¿Cuál es la capital de Francia?",
+    "o": [
+      "Londres",
+      "París",
+      "Berlín",
+      "Roma"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuántos continentes hay?",
+    "o": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Cuál es el río más largo del mundo?",
+    "o": [
+      "Nilo",
+      "Amazonas",
+      "Yangtsé",
+      "Misisipi"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es el planeta más grande del sistema solar?",
+    "o": [
+      "Saturno",
+      "Júpiter",
+      "Neptuno",
+      "Urano"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Quién escribió 'Don Quijote de la Mancha'?",
+    "o": [
+      "Shakespeare",
+      "Cervantes",
+      "García Márquez",
+      "Borges"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es el océano más grande?",
+    "o": [
+      "Atlántico",
+      "Índico",
+      "Pacífico",
+      "Ártico"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿En qué año llegó el hombre a la Luna?",
+    "o": [
+      "1965",
+      "1969",
+      "1972",
+      "1958"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es la capital de Australia?",
+    "o": [
+      "Sídney",
+      "Melbourne",
+      "Canberra",
+      "Perth"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Qué gas absorben las plantas para hacer fotosíntesis?",
+    "o": [
+      "Oxígeno",
+      "Nitrógeno",
+      "Dióxido de carbono",
+      "Hidrógeno"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Cuántos lados tiene un hexágono?",
+    "o": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es el idioma con más hablantes nativos?",
+    "o": [
+      "Inglés",
+      "Español",
+      "Mandarín",
+      "Hindi"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Quién pintó la Mona Lisa?",
+    "o": [
+      "Van Gogh",
+      "Picasso",
+      "Da Vinci",
+      "Dalí"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Cuál es el país más grande del mundo?",
+    "o": [
+      "Canadá",
+      "China",
+      "Rusia",
+      "EE.UU."
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Cuántos huesos tiene el cuerpo humano adulto?",
+    "o": [
+      "206",
+      "186",
+      "226",
+      "250"
+    ],
+    "c": 0
+  },
+  {
+    "q": "¿Cuál es el metal líquido a temperatura ambiente?",
+    "o": [
+      "Mercurio",
+      "Plomo",
+      "Estaño",
+      "Zinc"
+    ],
+    "c": 0
+  },
+  {
+    "q": "¿Quién fue el primer presidente de EE.UU.?",
+    "o": [
+      "Lincoln",
+      "Washington",
+      "Jefferson",
+      "Adams"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es la capital de Japón?",
+    "o": [
+      "Osaka",
+      "Kioto",
+      "Tokio",
+      "Nagoya"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Cuántos jugadores tiene un equipo de fútbol en cancha?",
+    "o": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Qué planeta es conocido como el planeta rojo?",
+    "o": [
+      "Venus",
+      "Marte",
+      "Júpiter",
+      "Mercurio"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es la fórmula química del agua?",
+    "o": [
+      "CO2",
+      "H2O",
+      "O2",
+      "NaCl"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿En qué continente está Egipto?",
+    "o": [
+      "Asia",
+      "África",
+      "Europa",
+      "Oceanía"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es el animal terrestre más rápido?",
+    "o": [
+      "León",
+      "Guepardo",
+      "Caballo",
+      "Antílope"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuántos minutos tiene una hora y media?",
+    "o": [
+      "80",
+      "90",
+      "100",
+      "120"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Quién escribió 'Romeo y Julieta'?",
+    "o": [
+      "Cervantes",
+      "Shakespeare",
+      "Dante",
+      "Hugo"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es la montaña más alta del mundo?",
+    "o": [
+      "K2",
+      "Everest",
+      "Aconcagua",
+      "Kilimanjaro"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Qué instrumento tiene 88 teclas?",
+    "o": [
+      "Guitarra",
+      "Piano",
+      "Órgano",
+      "Acordeón"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es la capital de Italia?",
+    "o": [
+      "Milán",
+      "Nápoles",
+      "Roma",
+      "Florencia"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Cuántos colores tiene el arcoíris?",
+    "o": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Qué organelo produce energía en la célula?",
+    "o": [
+      "Núcleo",
+      "Ribosoma",
+      "Mitocondria",
+      "Vacuola"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Cuál es el país con más población?",
+    "o": [
+      "India",
+      "China",
+      "EE.UU.",
+      "Indonesia"
+    ],
+    "c": 0
+  },
+  {
+    "q": "¿Quién descubrió la penicilina?",
+    "o": [
+      "Pasteur",
+      "Fleming",
+      "Koch",
+      "Salk"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es la capital de Brasil?",
+    "o": [
+      "Río de Janeiro",
+      "São Paulo",
+      "Brasilia",
+      "Salvador"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Cuántos días tiene un año bisiesto?",
+    "o": [
+      "364",
+      "365",
+      "366",
+      "367"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Qué elemento químico tiene el símbolo 'Fe'?",
+    "o": [
+      "Flúor",
+      "Hierro",
+      "Fósforo",
+      "Francio"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es el idioma oficial de Brasil?",
+    "o": [
+      "Español",
+      "Portugués",
+      "Inglés",
+      "Francés"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Quién fue Cleopatra?",
+    "o": [
+      "Reina de Egipto",
+      "Emperatriz romana",
+      "Diosa griega",
+      "Científica"
+    ],
+    "c": 0
+  },
+  {
+    "q": "¿Cuántos segundos tiene un minuto?",
+    "o": [
+      "30",
+      "60",
+      "90",
+      "100"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es el desierto más grande del mundo?",
+    "o": [
+      "Sahara",
+      "Gobi",
+      "Atacama",
+      "Antártico"
+    ],
+    "c": 3
+  },
+  {
+    "q": "¿Qué planeta está más cerca del Sol?",
+    "o": [
+      "Venus",
+      "Tierra",
+      "Mercurio",
+      "Marte"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Cuál es la capital de Canadá?",
+    "o": [
+      "Toronto",
+      "Vancouver",
+      "Ottawa",
+      "Montreal"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Cuántas cuerdas tiene una guitarra estándar?",
+    "o": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Quién escribió 'Cien años de soledad'?",
+    "o": [
+      "Borges",
+      "García Márquez",
+      "Neruda",
+      "Cortázar"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es el mamífero más grande del mundo?",
+    "o": [
+      "Elefante",
+      "Ballena azul",
+      "Ballena jorobada",
+      "Orca"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿En qué año cayó el Muro de Berlín?",
+    "o": [
+      "1985",
+      "1989",
+      "1991",
+      "1993"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es la capital de Rusia?",
+    "o": [
+      "San Petersburgo",
+      "Moscú",
+      "Kiev",
+      "Minsk"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuántos lados tiene un triángulo?",
+    "o": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Qué gas respiran los humanos principalmente?",
+    "o": [
+      "Nitrógeno",
+      "Oxígeno",
+      "Dióxido de carbono",
+      "Helio"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuál es la capital de Argentina?",
+    "o": [
+      "Córdoba",
+      "Rosario",
+      "Buenos Aires",
+      "Mendoza"
+    ],
+    "c": 2
+  },
+  {
+    "q": "¿Quién pintó 'La noche estrellada'?",
+    "o": [
+      "Monet",
+      "Van Gogh",
+      "Picasso",
+      "Rembrandt"
+    ],
+    "c": 1
+  },
+  {
+    "q": "¿Cuántos grados tiene un círculo completo?",
+    "o": [
+      "180",
+      "270",
+      "360",
+      "450"
+    ],
+    "c": 2
+  }
+]
