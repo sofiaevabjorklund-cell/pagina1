@@ -15,6 +15,7 @@
     .start-title{font-size:1.4rem;color:#333;margin-bottom:10px}
     .start-sub{color:#6c757d;margin-bottom:25px;line-height:1.5}
     .big-btn{padding:16px 40px;font-size:1.1rem;background:linear-gradient(90deg,#667eea,#764ba2);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:bold;box-shadow:0 4px 15px rgba(102,126,234,.4)}
+    .big-btn:disabled{opacity:.5;cursor:not-allowed}
     .big-btn:active{transform:scale(.95)}
     .stats-bar{display:flex;justify-content:space-around;padding:15px;background:#f8f9fa;border-bottom:2px solid #e9ecef}
     .stat-label{font-size:.75rem;color:#6c757d;text-transform:uppercase;letter-spacing:1px}
@@ -35,6 +36,7 @@
     .results-message{color:#6c757d;margin-bottom:30px}
     .restart-btn{padding:16px 40px;font-size:1.1rem;background:linear-gradient(90deg,#feca57,#ff6b6b);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:bold}
     .restart-btn:active{transform:scale(.95)}
+    .error-msg{color:#dc3545;margin-top:15px;font-size:.9rem}
     @media(max-width:480px){
       body{padding:12px}
       .header h1{font-size:1.3rem}
@@ -49,8 +51,9 @@
 
     <div class="screen active" id="startScreen">
       <h2 class="start-title">¡Bienvenido al Quiz!</h2>
-      <p class="start-sub">10 preguntas de cultura general.<br>Respondé rápido para ganar más puntos.<br>Tenés 3 vidas ❤️❤️❤️</p>
-      <button class="big-btn" onclick="startGame()">Iniciar Juego ▶️</button>
+      <p class="start-sub">Se eligen 10 preguntas al azar de un banco de 50.<br>Respondé rápido para ganar más puntos.<br>Tenés 3 vidas ❤️❤️❤️</p>
+      <button class="big-btn" id="startBtn" onclick="startGame()" disabled>Cargando preguntas...</button>
+      <div class="error-msg" id="errorMsg"></div>
     </div>
 
     <div class="screen" id="gameScreen">
@@ -77,28 +80,45 @@
   </div>
 
 <script>
-const questions=[
- {q:"¿Cuál es el río más largo del mundo?",o:["Nilo","Amazonas","Yangtsé","Misisipi"],c:1},
- {q:"¿Cuántos continentes hay?",o:["5","6","7","8"],c:2},
- {q:"¿Cuál es el planeta más grande del sistema solar?",o:["Saturno","Júpiter","Neptuno","Urano"],c:1},
- {q:"¿Quién escribió 'Don Quijote de la Mancha'?",o:["Shakespeare","Cervantes","García Márquez","Borges"],c:1},
- {q:"¿Cuál es el océano más grande?",o:["Atlántico","Índico","Pacífico","Ártico"],c:2},
- {q:"¿En qué año llegó el hombre a la Luna?",o:["1965","1969","1972","1958"],c:1},
- {q:"¿Cuál es la capital de Australia?",o:["Sídney","Melbourne","Canberra","Perth"],c:2},
- {q:"¿Qué gas absorben principalmente las plantas para hacer fotosíntesis?",o:["Oxígeno","Nitrógeno","Dióxido de carbono","Hidrógeno"],c:2},
- {q:"¿Cuál es el idioma con más hablantes nativos?",o:["Inglés","Español","Mandarín","Hindi"],c:2},
- {q:"¿Cuántos lados tiene un hexágono?",o:["5","6","7","8"],c:1}
-];
-
+let allQuestions=[];   // las 50 del JSON
+let questions=[];      // las 10 elegidas al azar
 let current=0,score=0,lives=3,timer,timeLeft;
 const MAX_TIME=15;
+const QUESTIONS_PER_GAME=10;
+
+// Cargar el JSON automáticamente al abrir la página
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const res = await fetch('preguntas.json');
+    if (!res.ok) throw new Error('No se pudo leer preguntas.json');
+    allQuestions = await res.json();
+    const btn = document.getElementById('startBtn');
+    btn.disabled = false;
+    btn.textContent = 'Iniciar Juego ▶️';
+  } catch (e) {
+    document.getElementById('errorMsg').textContent =
+      'Error al cargar preguntas.json: ' + e.message + '. Abrí el juego con un servidor local (no con doble clic).';
+  }
+});
 
 function showScreen(id){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 }
 
+// Elegir 10 preguntas al azar de las 50
+function pickRandomQuestions(){
+  const copy=[...allQuestions];
+  const picked=[];
+  for(let i=0;i<QUESTIONS_PER_GAME && copy.length>0;i++){
+    const idx=Math.floor(Math.random()*copy.length);
+    picked.push(copy.splice(idx,1)[0]);
+  }
+  return picked;
+}
+
 function startGame(){
+  questions=pickRandomQuestions();
   current=0;score=0;lives=3;
   showScreen('gameScreen');
   loadQuestion();
@@ -200,8 +220,6 @@ function showResults(){
   else m='¡Seguí practicando! Vos podés 💪';
   document.getElementById('finalMessage').textContent=m;
 }
-
-document.addEventListener('DOMContentLoaded',()=>{showScreen('startScreen');});
 </script>
 </body>
 </html>
