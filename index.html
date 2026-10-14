@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Quiz Cartoon Network</title>
+  <title>Quiz de Cultura General</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,sans-serif}
     body{background:linear-gradient(135deg,#667eea,#764ba2);min-height:100vh;display:flex;justify-content:center;align-items:center;padding:16px}
     .game-container{background:#fff;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,.2);width:100%;max-width:500px;overflow:hidden}
-    .header{background:linear-gradient(90deg,#ff6b6b,#feca57);padding:20px;text-align:center}
+    .header{background:linear-gradient(90deg,#667eea,#764ba2);padding:20px;text-align:center}
     .header h1{color:#fff;font-size:1.5rem;text-shadow:2px 2px 4px rgba(0,0,0,.3)}
     .screen{padding:30px 20px;text-align:center;display:none}
     .screen.active{display:block}
@@ -45,16 +45,14 @@
 </head>
 <body>
   <div class="game-container">
-    <div class="header"><h1>🎮 Quiz Cartoon Network</h1></div>
+    <div class="header"><h1>🌍 Quiz de Cultura General</h1></div>
 
-    <!-- Pantalla de inicio -->
     <div class="screen active" id="startScreen">
       <h2 class="start-title">¡Bienvenido al Quiz!</h2>
-      <p class="start-sub">10 preguntas de Cartoon Network.<br>Respondé rápido para ganar más puntos.<br>Tenés 3 vidas ❤️❤️❤️</p>
+      <p class="start-sub">10 preguntas de cultura general.<br>Respondé rápido para ganar más puntos.<br>Tenés 3 vidas ❤️❤️❤️</p>
       <button class="big-btn" onclick="startGame()">Iniciar Juego ▶️</button>
     </div>
 
-    <!-- Pantalla de juego -->
     <div class="screen" id="gameScreen">
       <div class="stats-bar">
         <div><div class="stat-label">Pregunta</div><div class="stat-value" id="questionNum">1/10</div></div>
@@ -70,7 +68,6 @@
       </div>
     </div>
 
-    <!-- Pantalla de resultados -->
     <div class="screen" id="resultsScreen">
       <h2>🎉 ¡Juego Terminado!</h2>
       <div class="results-score" id="finalScore">0</div>
@@ -81,16 +78,16 @@
 
 <script>
 const questions=[
- {q:"¿Cuál es el nombre del perro en 'Hora de Aventura'?",o:["Jake","Finn","BMO","Starchy"],c:0},
- {q:"¿Qué personaje tiene el Omnitrix?",o:["Ben 10","Chowder","Billy","Johnny Bravo"],c:0},
- {q:"¿En qué ciudad viven las Chicas Superpoderosas?",o:["Ciudad Salto","Ciudad Central","Megaciudad","Ciudad Dibujo"],c:0},
- {q:"¿De qué color es Gumball?",o:["Azul","Rosa","Verde","Amarillo"],c:0},
- {q:"¿Cómo se llama el hermano de Finn?",o:["Jake","BMO","Marceline","Princesa Grumosa"],c:0},
- {q:"¿Quién es el villano de las Chicas Superpoderosas?",o:["Mojo Jojo","Him","Fuzzy","Todos"],c:0},
- {q:"¿Cuál es la frase típica de Johnny Bravo?",o:["¡Hoo-ha!","¡Oh yeah!","¡Cowabunga!","¡Booyah!"],c:1},
- {q:"¿Cómo se llama el laboratorio de Dexter?",o:["Laboratorio de Dexter","Labo-D","DexLab","Super Lab"],c:0},
- {q:"¿Qué animal es Rigby en 'Regular Show'?",o:["Mapache","Zorro","Conejo","Oso"],c:0},
- {q:"¿Cómo se llama el robot azul de 'Hora de Aventura'?",o:["BMO","Jake","Gunter","LSP"],c:0}
+ {q:"¿Cuál es el río más largo del mundo?",o:["Nilo","Amazonas","Yangtsé","Misisipi"],c:1},
+ {q:"¿Cuántos continentes hay?",o:["5","6","7","8"],c:2},
+ {q:"¿Cuál es el planeta más grande del sistema solar?",o:["Saturno","Júpiter","Neptuno","Urano"],c:1},
+ {q:"¿Quién escribió 'Don Quijote de la Mancha'?",o:["Shakespeare","Cervantes","García Márquez","Borges"],c:1},
+ {q:"¿Cuál es el océano más grande?",o:["Atlántico","Índico","Pacífico","Ártico"],c:2},
+ {q:"¿En qué año llegó el hombre a la Luna?",o:["1965","1969","1972","1958"],c:1},
+ {q:"¿Cuál es la capital de Australia?",o:["Sídney","Melbourne","Canberra","Perth"],c:2},
+ {q:"¿Qué gas absorben principalmente las plantas para hacer fotosíntesis?",o:["Oxígeno","Nitrógeno","Dióxido de carbono","Hidrógeno"],c:2},
+ {q:"¿Cuál es el idioma con más hablantes nativos?",o:["Inglés","Español","Mandarín","Hindi"],c:2},
+ {q:"¿Cuántos lados tiene un hexágono?",o:["5","6","7","8"],c:1}
 ];
 
 let current=0,score=0,lives=3,timer,timeLeft;
@@ -197,7 +194,7 @@ function showResults(){
   const max=questions.length*(100+MAX_TIME*10);
   const p=(score/max)*100;
   let m;
-  if(p>=90)m='¡Excelente! Sos un experto en Cartoon Network 🏆';
+  if(p>=90)m='¡Excelente! Sos un crack de la cultura general 🏆';
   else if(p>=70)m='¡Muy bien! Casi perfecto 🌟';
   else if(p>=50)m='¡Bien hecho! Pero podés mejorar 👍';
   else m='¡Seguí practicando! Vos podés 💪';
