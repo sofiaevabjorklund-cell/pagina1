@@ -1,24 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Quiz de Cultura General</title>
+  <title>Capacitación para Trabajar en el Campo</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,sans-serif}
-    body{background:linear-gradient(135deg,#667eea,#764ba2);min-height:100vh;display:flex;justify-content:center;align-items:center;padding:16px}
+    body{background:linear-gradient(135deg,#2e7d32,#66bb6a);min-height:100vh;display:flex;justify-content:center;align-items:center;padding:16px}
     .game-container{background:#fff;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,.2);width:100%;max-width:500px;overflow:hidden}
-    .header{background:linear-gradient(90deg,#667eea,#764ba2);padding:20px;text-align:center}
-    .header h1{color:#fff;font-size:1.5rem;text-shadow:2px 2px 4px rgba(0,0,0,.3)}
+    .header{background:linear-gradient(90deg,#1b5e20,#388e3c);padding:20px;text-align:center}
+    .header h1{color:#fff;font-size:1.4rem;text-shadow:2px 2px 4px rgba(0,0,0,.3)}
     .screen{padding:30px 20px;text-align:center;display:none}
     .screen.active{display:block}
     .start-title{font-size:1.4rem;color:#333;margin-bottom:10px}
     .start-sub{color:#6c757d;margin-bottom:25px;line-height:1.5}
-    .big-btn{padding:16px 40px;font-size:1.1rem;background:linear-gradient(90deg,#667eea,#764ba2);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:bold;box-shadow:0 4px 15px rgba(102,126,234,.4)}
+    .big-btn{padding:16px 40px;font-size:1.1rem;background:linear-gradient(90deg,#2e7d32,#66bb6a);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:bold;box-shadow:0 4px 15px rgba(46,125,50,.4)}
     .big-btn:disabled{opacity:.5;cursor:not-allowed}
     .big-btn:active{transform:scale(.95)}
-    .stats-bar{display:flex;justify-content:space-around;padding:15px;background:#f8f9fa;border-bottom:2px solid #e9ecef}
-    .stat-label{font-size:.75rem;color:#6c757d;text-transform:uppercase;letter-spacing:1px}
+    .stats-bar{display:flex;justify-content:space-around;padding:15px;background:#f1f8e9;border-bottom:2px solid #c8e6c9}
+    .stat-label{font-size:.75rem;color:#558b2f;text-transform:uppercase;letter-spacing:1px}
     .stat-value{font-size:1.2rem;font-weight:bold;color:#333}
     .timer-bar{height:6px;background:#e9ecef}
     .timer-fill{height:100%;width:100%;background:linear-gradient(90deg,#28a745,#20c997);transition:width .1s linear}
@@ -30,16 +31,16 @@
     .option-btn.incorrect{background:#f8d7da;border-color:#dc3545;color:#721c24}
     .option-btn.disabled{pointer-events:none;opacity:.6}
     .feedback{margin-top:20px;font-size:1.1rem;font-weight:bold;margin-bottom:15px}
-    .next-btn{padding:14px 30px;font-size:1rem;background:linear-gradient(90deg,#667eea,#764ba2);color:#fff;border:none;border-radius:25px;cursor:pointer;font-weight:bold}
+    .next-btn{padding:14px 30px;font-size:1rem;background:linear-gradient(90deg,#2e7d32,#66bb6a);color:#fff;border:none;border-radius:25px;cursor:pointer;font-weight:bold}
     .next-btn:active{transform:scale(.95)}
-    .results-score{font-size:3rem;font-weight:bold;color:#667eea;margin:20px 0}
+    .results-score{font-size:3rem;font-weight:bold;color:#2e7d32;margin:20px 0}
     .results-message{color:#6c757d;margin-bottom:30px}
     .restart-btn{padding:16px 40px;font-size:1.1rem;background:linear-gradient(90deg,#feca57,#ff6b6b);color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:bold}
     .restart-btn:active{transform:scale(.95)}
     .error-msg{color:#dc3545;margin-top:15px;font-size:.9rem}
     @media(max-width:480px){
       body{padding:12px}
-      .header h1{font-size:1.3rem}
+      .header h1{font-size:1.2rem}
       .question-text{font-size:1.05rem}
       .option-btn{padding:14px;font-size:.95rem}
     }
@@ -47,11 +48,11 @@
 </head>
 <body>
   <div class="game-container">
-    <div class="header"><h1>🌍 Quiz de Cultura General</h1></div>
+    <div class="header"><h1>🌾 Capacitación para Trabajar en el Campo</h1></div>
 
     <div class="screen active" id="startScreen">
-      <h2 class="start-title">¡Bienvenido al Quiz!</h2>
-      <p class="start-sub">Se eligen 10 preguntas al azar de un banco de 50.<br>Respondé rápido para ganar más puntos.<br>Tenés 3 vidas ❤️❤️❤️</p>
+      <h2 class="start-title">¡Bienvenido a tu Capacitación!</h2>
+      <p class="start-sub">Antes de comenzar a trabajar con nosotros, completá esta evaluación.<br>Se toman 10 preguntas al azar de un banco de 50 sobre seguridad, normas y buenas prácticas en el campo.<br>Tenés 3 vidas ❤️❤️❤️ y 15 segundos por pregunta.</p>
       <button class="big-btn" id="startBtn" onclick="startGame()" disabled>Cargando preguntas...</button>
       <div class="error-msg" id="errorMsg"></div>
     </div>
@@ -72,7 +73,7 @@
     </div>
 
     <div class="screen" id="resultsScreen">
-      <h2>🎉 ¡Juego Terminado!</h2>
+      <h2>🎉 ¡Capacitación Completada!</h2>
       <div class="results-score" id="finalScore">0</div>
       <p class="results-message" id="finalMessage"></p>
       <button class="restart-btn" onclick="showStart()">Volver al Inicio 🔄</button>
@@ -80,13 +81,12 @@
   </div>
 
 <script>
-let allQuestions=[];   // las 50 del JSON
-let questions=[];      // las 10 elegidas al azar
+let allQuestions=[];
+let questions=[];
 let current=0,score=0,lives=3,timer,timeLeft;
 const MAX_TIME=15;
 const QUESTIONS_PER_GAME=10;
 
-// Cargar el JSON automáticamente al abrir la página
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     const res = await fetch('preguntas.json');
@@ -94,10 +94,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     allQuestions = await res.json();
     const btn = document.getElementById('startBtn');
     btn.disabled = false;
-    btn.textContent = 'Iniciar Juego ▶️';
+    btn.textContent = 'Comenzar Capacitación ▶️';
   } catch (e) {
     document.getElementById('errorMsg').textContent =
-      'Error al cargar preguntas.json: ' + e.message + '. Abrí el juego con un servidor local (no con doble clic).';
+      'Error al cargar preguntas.json: ' + e.message + '. Abrí el juego con un servidor local o GitHub Pages.';
   }
 });
 
@@ -106,7 +106,6 @@ function showScreen(id){
   document.getElementById(id).classList.add('active');
 }
 
-// Elegir 10 preguntas al azar de las 50
 function pickRandomQuestions(){
   const copy=[...allQuestions];
   const picked=[];
@@ -214,10 +213,10 @@ function showResults(){
   const max=questions.length*(100+MAX_TIME*10);
   const p=(score/max)*100;
   let m;
-  if(p>=90)m='¡Excelente! Sos un crack de la cultura general 🏆';
-  else if(p>=70)m='¡Muy bien! Casi perfecto 🌟';
-  else if(p>=50)m='¡Bien hecho! Pero podés mejorar 👍';
-  else m='¡Seguí practicando! Vos podés 💪';
+  if(p>=90)m='¡Excelente! Estás listo para trabajar con nosotros en el campo 🌟';
+  else if(p>=70)m='¡Muy bien! Tenés una buena base, seguí repasando 👍';
+  else if(p>=50)m='Aprobado, pero te recomendamos repasar las normas de seguridad 📚';
+  else m='Necesitás repasar la capacitación antes de comenzar a trabajar 💪';
   document.getElementById('finalMessage').textContent=m;
 }
 </script>
