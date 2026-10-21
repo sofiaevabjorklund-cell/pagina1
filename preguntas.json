@@ -1,502 +1,702 @@
 [
   {
-    "q": "¿Cuál es la capital de Francia?",
+    "id": 1,
+    "nivel": "Básico",
+    "tiempo": 30,
+    "q": "Te asignan una máquina que nunca operaste.",
     "o": [
-      "Londres",
-      "París",
-      "Berlín",
-      "Roma"
+      "Pido capacitación y autorización antes de usarla.",
+      "Pruebo los controles mientras avanzo.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 1
+    "c": 0,
+    "explicacion": "La decisión esperada es: Pido capacitación y autorización antes de usarla. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuántos continentes hay?",
+    "id": 2,
+    "nivel": "Básico",
+    "tiempo": 30,
+    "q": "No entendés una instrucción y el equipo ya comenzó.",
     "o": [
-      "5",
-      "6",
-      "7",
-      "8"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Pido aclaración y confirmo la tarea antes de empezar.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Imito lo que hacen los demás."
     ],
-    "c": 2
+    "c": 1,
+    "explicacion": "La decisión esperada es: Pido aclaración y confirmo la tarea antes de empezar. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es el río más largo del mundo?",
+    "id": 3,
+    "nivel": "Básico",
+    "tiempo": 30,
+    "q": "Tu equipo de protección está dañado antes de la tarea.",
     "o": [
-      "Nilo",
-      "Amazonas",
-      "Yangtsé",
-      "Misisipi"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "No inicio la tarea expuesta y solicito el reemplazo adecuado.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Lo uso hasta el próximo descanso."
     ],
-    "c": 1
+    "c": 1,
+    "explicacion": "La decisión esperada es: No inicio la tarea expuesta y solicito el reemplazo adecuado. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es el planeta más grande del sistema solar?",
+    "id": 4,
+    "nivel": "Básico",
+    "tiempo": 30,
+    "q": "Encontrás herramientas en una vía de circulación.",
     "o": [
-      "Saturno",
-      "Júpiter",
-      "Neptuno",
-      "Urano"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Las dejo porque no son mías.",
+      "Coordino retirarlas de forma segura y mantener el paso despejado."
     ],
-    "c": 1
+    "c": 3,
+    "explicacion": "La decisión esperada es: Coordino retirarlas de forma segura y mantener el paso despejado. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Quién escribió 'Don Quijote de la Mancha'?",
+    "id": 5,
+    "nivel": "Básico",
+    "tiempo": 30,
+    "q": "Una herramienta tiene el mango roto.",
     "o": [
-      "Shakespeare",
-      "Cervantes",
-      "García Márquez",
-      "Borges"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "La retiro de uso e informo para su reparación o reemplazo.",
+      "La sujeto con cinta para terminar."
     ],
-    "c": 1
+    "c": 2,
+    "explicacion": "La decisión esperada es: La retiro de uso e informo para su reparación o reemplazo. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es el océano más grande?",
+    "id": 6,
+    "nivel": "Básico",
+    "tiempo": 30,
+    "q": "No encontrás el punto de encuentro para emergencias.",
     "o": [
-      "Atlántico",
-      "Índico",
-      "Pacífico",
-      "Ártico"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Espero a que haya una alarma para averiguarlo.",
+      "Lo consulto y ubico antes de comenzar la actividad."
     ],
-    "c": 2
+    "c": 3,
+    "explicacion": "La decisión esperada es: Lo consulto y ubico antes de comenzar la actividad. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿En qué año llegó el hombre a la Luna?",
+    "id": 7,
+    "nivel": "Básico",
+    "tiempo": 30,
+    "q": "Un visitante entra hacia una zona de máquinas.",
     "o": [
-      "1965",
-      "1969",
-      "1972",
-      "1958"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Asumo que conoce el establecimiento.",
+      "Le indico desde un lugar seguro que no ingrese y aviso al responsable.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 1
+    "c": 2,
+    "explicacion": "La decisión esperada es: Le indico desde un lugar seguro que no ingrese y aviso al responsable. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es la capital de Australia?",
+    "id": 8,
+    "nivel": "Básico",
+    "tiempo": 30,
+    "q": "Te piden una tarea distinta de la que te explicaron.",
     "o": [
-      "Sídney",
-      "Melbourne",
-      "Canberra",
-      "Perth"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Confirmo alcance, riesgos y autorización antes de ejecutarla.",
+      "La hago porque se parece a la anterior.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 2
+    "c": 1,
+    "explicacion": "La decisión esperada es: Confirmo alcance, riesgos y autorización antes de ejecutarla. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Qué gas absorben las plantas para hacer fotosíntesis?",
+    "id": 9,
+    "nivel": "Básico",
+    "tiempo": 30,
+    "q": "Ves un cartel de acceso restringido en tu recorrido.",
     "o": [
-      "Oxígeno",
-      "Nitrógeno",
-      "Dióxido de carbono",
-      "Hidrógeno"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Respeto la restricción y busco la ruta autorizada.",
+      "Paso rápido porque no veo actividad.",
+      "Continúo la tarea y aviso al finalizar el turno."
     ],
-    "c": 2
+    "c": 1,
+    "explicacion": "La decisión esperada es: Respeto la restricción y busco la ruta autorizada. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuántos lados tiene un hexágono?",
+    "id": 10,
+    "nivel": "Básico",
+    "tiempo": 30,
+    "q": "Al terminar el turno detectás una falla pendiente.",
     "o": [
-      "5",
-      "6",
-      "7",
-      "8"
+      "La informo y registro en el relevo, sin dejar disponible un equipo inseguro.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Espero a que el siguiente turno la descubra."
     ],
-    "c": 1
+    "c": 0,
+    "explicacion": "La decisión esperada es: La informo y registro en el relevo, sin dejar disponible un equipo inseguro. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es el idioma con más hablantes nativos?",
+    "id": 11,
+    "nivel": "Intermedio",
+    "tiempo": 40,
+    "q": "La máquina se atasca y te apuran para destrabarla.",
     "o": [
-      "Inglés",
-      "Español",
-      "Mandarín",
-      "Hindi"
+      "Retiro el atasco con el motor en marcha.",
+      "Detengo, aíslo y aseguro energías según el procedimiento; solo intervengo si estoy autorizado.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 2
+    "c": 1,
+    "explicacion": "La decisión esperada es: Detengo, aíslo y aseguro energías según el procedimiento; solo intervengo si estoy autorizado. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Quién pintó la Mona Lisa?",
+    "id": 12,
+    "nivel": "Intermedio",
+    "tiempo": 40,
+    "q": "Una protección de la máquina está ausente.",
     "o": [
-      "Van Gogh",
-      "Picasso",
-      "Da Vinci",
-      "Dalí"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Trabajo despacio evitando esa parte.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "No uso el equipo e informo para una reparación autorizada."
     ],
-    "c": 2
+    "c": 3,
+    "explicacion": "La decisión esperada es: No uso el equipo e informo para una reparación autorizada. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es el país más grande del mundo?",
+    "id": 13,
+    "nivel": "Intermedio",
+    "tiempo": 40,
+    "q": "Un compañero quiere anular un interruptor de seguridad.",
     "o": [
-      "Canadá",
-      "China",
-      "Rusia",
-      "EE.UU."
+      "Acepto si solo lo hace unos minutos.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Rechazo la maniobra y comunico el riesgo antes de continuar.",
+      "Continúo la tarea y aviso al finalizar el turno."
     ],
-    "c": 2
+    "c": 2,
+    "explicacion": "La decisión esperada es: Rechazo la maniobra y comunico el riesgo antes de continuar. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuántos huesos tiene el cuerpo humano adulto?",
+    "id": 14,
+    "nivel": "Intermedio",
+    "tiempo": 40,
+    "q": "Debés pasar bajo una pieza sostenida hidráulicamente.",
     "o": [
-      "206",
-      "186",
-      "226",
-      "250"
+      "Paso porque el motor está apagado.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "No ingreso hasta que personal competente aísle y asegure mecánicamente según el procedimiento.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 0
+    "c": 2,
+    "explicacion": "La decisión esperada es: No ingreso hasta que personal competente aísle y asegure mecánicamente según el procedimiento. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es el metal líquido a temperatura ambiente?",
+    "id": 15,
+    "nivel": "Intermedio",
+    "tiempo": 40,
+    "q": "Vas a trasladar equipo alto y hay cables aéreos.",
     "o": [
-      "Mercurio",
-      "Plomo",
-      "Estaño",
-      "Zinc"
+      "Planifico una ruta segura evitando las líneas y consulto las restricciones aplicables.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Calculo a ojo si hay espacio.",
+      "Continúo la tarea y aviso al finalizar el turno."
     ],
-    "c": 0
+    "c": 0,
+    "explicacion": "La decisión esperada es: Planifico una ruta segura evitando las líneas y consulto las restricciones aplicables. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Quién fue el primer presidente de EE.UU.?",
+    "id": 16,
+    "nivel": "Intermedio",
+    "tiempo": 40,
+    "q": "El envase de un producto químico no tiene identificación.",
     "o": [
-      "Lincoln",
-      "Washington",
-      "Jefferson",
-      "Adams"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Lo identifico por el olor.",
+      "No lo utilizo y aviso para identificarlo y gestionarlo de forma segura.",
+      "Continúo la tarea y aviso al finalizar el turno."
     ],
-    "c": 1
+    "c": 2,
+    "explicacion": "La decisión esperada es: No lo utilizo y aviso para identificarlo y gestionarlo de forma segura. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es la capital de Japón?",
+    "id": 17,
+    "nivel": "Intermedio",
+    "tiempo": 40,
+    "q": "Te piden mezclar productos sin información de compatibilidad.",
     "o": [
-      "Osaka",
-      "Kioto",
-      "Tokio",
-      "Nagoya"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Pruebo primero con una pequeña cantidad.",
+      "No mezclo; solicito instrucciones autorizadas y documentación de seguridad.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 2
+    "c": 2,
+    "explicacion": "La decisión esperada es: No mezclo; solicito instrucciones autorizadas y documentación de seguridad. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuántos jugadores tiene un equipo de fútbol en cancha?",
+    "id": 18,
+    "nivel": "Intermedio",
+    "tiempo": 40,
+    "q": "Hay peatones en la trayectoria prevista de una máquina.",
     "o": [
-      "9",
-      "10",
-      "11",
-      "12"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Toco bocina y sigo avanzando.",
+      "Detengo el movimiento hasta separar personas y vehículo de forma segura.",
+      "Continúo la tarea y aviso al finalizar el turno."
     ],
-    "c": 2
+    "c": 2,
+    "explicacion": "La decisión esperada es: Detengo el movimiento hasta separar personas y vehículo de forma segura. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Qué planeta es conocido como el planeta rojo?",
+    "id": 19,
+    "nivel": "Intermedio",
+    "tiempo": 40,
+    "q": "Un compañero propone viajar sobre un equipo sin asiento habilitado.",
     "o": [
-      "Venus",
-      "Marte",
-      "Júpiter",
-      "Mercurio"
+      "Acepto si el trayecto es corto.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "No acepto y solicito un traslado adecuado."
     ],
-    "c": 1
+    "c": 3,
+    "explicacion": "La decisión esperada es: No acepto y solicito un traslado adecuado. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es la fórmula química del agua?",
+    "id": 20,
+    "nivel": "Intermedio",
+    "tiempo": 40,
+    "q": "Un trabajo exige levantar una carga que no podés manejar con seguridad.",
     "o": [
-      "CO2",
-      "H2O",
-      "O2",
-      "NaCl"
+      "Hago un esfuerzo rápido para terminar.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Solicito ayuda o medios adecuados y planifico el movimiento.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 1
+    "c": 2,
+    "explicacion": "La decisión esperada es: Solicito ayuda o medios adecuados y planifico el movimiento. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿En qué continente está Egipto?",
+    "id": 21,
+    "nivel": "Avanzado",
+    "tiempo": 45,
+    "q": "Escuchás truenos mientras trabajás al aire libre.",
     "o": [
-      "Asia",
-      "África",
-      "Europa",
-      "Oceanía"
+      "Me refugio bajo un árbol aislado.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Suspendo la actividad y voy a un edificio seguro o vehículo cerrado de techo rígido.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 1
+    "c": 2,
+    "explicacion": "La decisión esperada es: Suspendo la actividad y voy a un edificio seguro o vehículo cerrado de techo rígido. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es el animal terrestre más rápido?",
+    "id": 22,
+    "nivel": "Avanzado",
+    "tiempo": 45,
+    "q": "Un animal está agitado y bloquea la zona de trabajo.",
     "o": [
-      "León",
-      "Guepardo",
-      "Caballo",
-      "Antílope"
+      "Mantengo distancia, evito provocarlo y pido intervención de personal capacitado.",
+      "Intento empujarlo para abrir paso.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 1
+    "c": 0,
+    "explicacion": "La decisión esperada es: Mantengo distancia, evito provocarlo y pido intervención de personal capacitado. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuántos minutos tiene una hora y media?",
+    "id": 23,
+    "nivel": "Avanzado",
+    "tiempo": 45,
+    "q": "Tenés que manejar ganado y las instalaciones de contención están dañadas.",
     "o": [
-      "80",
-      "90",
-      "100",
-      "120"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Suspendo el manejo hasta contar con instalaciones seguras y personal competente.",
+      "Uso las instalaciones con menos animales."
     ],
-    "c": 1
+    "c": 2,
+    "explicacion": "La decisión esperada es: Suspendo el manejo hasta contar con instalaciones seguras y personal competente. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Quién escribió 'Romeo y Julieta'?",
+    "id": 24,
+    "nivel": "Avanzado",
+    "tiempo": 45,
+    "q": "El equipo muestra una falla de frenado durante la revisión previa.",
     "o": [
-      "Cervantes",
-      "Shakespeare",
-      "Dante",
-      "Hugo"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Lo uso solo en terreno plano.",
+      "Lo dejo fuera de servicio y solicito intervención autorizada."
     ],
-    "c": 1
+    "c": 3,
+    "explicacion": "La decisión esperada es: Lo dejo fuera de servicio y solicito intervención autorizada. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es la montaña más alta del mundo?",
+    "id": 25,
+    "nivel": "Avanzado",
+    "tiempo": 45,
+    "q": "Una manguera hidráulica pierde y el circuito está presurizado.",
     "o": [
-      "K2",
-      "Everest",
-      "Aconcagua",
-      "Kilimanjaro"
+      "No busco la fuga con la mano; detengo e informo para aislamiento y reparación competente.",
+      "Paso los dedos para localizar la pérdida.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Continúo la tarea y aviso al finalizar el turno."
     ],
-    "c": 1
+    "c": 0,
+    "explicacion": "La decisión esperada es: No busco la fuga con la mano; detengo e informo para aislamiento y reparación competente. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Qué instrumento tiene 88 teclas?",
+    "id": 26,
+    "nivel": "Avanzado",
+    "tiempo": 45,
+    "q": "Un contratista quiere empezar mantenimiento sin coordinar el aislamiento.",
     "o": [
-      "Guitarra",
-      "Piano",
-      "Órgano",
-      "Acordeón"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Detengo el inicio y coordino responsables, aislamientos y verificación del procedimiento.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Lo dejo actuar porque es especialista."
     ],
-    "c": 1
+    "c": 1,
+    "explicacion": "La decisión esperada es: Detengo el inicio y coordino responsables, aislamientos y verificación del procedimiento. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es la capital de Italia?",
+    "id": 27,
+    "nivel": "Avanzado",
+    "tiempo": 45,
+    "q": "Te sentís muy fatigado para operar el equipo.",
     "o": [
-      "Milán",
-      "Nápoles",
-      "Roma",
-      "Florencia"
+      "Sigo para no perder el ritmo.",
+      "Detengo la tarea de forma segura y aviso para reorganizarla.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Continúo la tarea y aviso al finalizar el turno."
     ],
-    "c": 2
+    "c": 1,
+    "explicacion": "La decisión esperada es: Detengo la tarea de forma segura y aviso para reorganizarla. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuántos colores tiene el arcoíris?",
+    "id": 28,
+    "nivel": "Avanzado",
+    "tiempo": 45,
+    "q": "Una instrucción nueva contradice una medida de seguridad establecida.",
     "o": [
-      "5",
-      "6",
-      "7",
-      "8"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "No improviso; aclaro la contradicción con el responsable antes de seguir.",
+      "Obedezco la instrucción más reciente.",
+      "Continúo la tarea y aviso al finalizar el turno."
     ],
-    "c": 2
+    "c": 1,
+    "explicacion": "La decisión esperada es: No improviso; aclaro la contradicción con el responsable antes de seguir. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Qué organelo produce energía en la célula?",
+    "id": 29,
+    "nivel": "Avanzado",
+    "tiempo": 45,
+    "q": "Hay una pérdida química cuya sustancia y magnitud desconocés.",
     "o": [
-      "Núcleo",
-      "Ribosoma",
-      "Mitocondria",
-      "Vacuola"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Empiezo a limpiarla con lo que encuentro.",
+      "Me alejo de la exposición, impido accesos desde zona segura y activo el protocolo."
     ],
-    "c": 2
+    "c": 3,
+    "explicacion": "La decisión esperada es: Me alejo de la exposición, impido accesos desde zona segura y activo el protocolo. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es el país con más población?",
+    "id": 30,
+    "nivel": "Avanzado",
+    "tiempo": 45,
+    "q": "Una tarea necesita protección respiratoria que no fue definida.",
     "o": [
-      "India",
-      "China",
-      "EE.UU.",
-      "Indonesia"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Uso cualquier mascarilla disponible.",
+      "No inicio la exposición y solicito evaluación y protección adecuadas."
     ],
-    "c": 0
+    "c": 3,
+    "explicacion": "La decisión esperada es: No inicio la exposición y solicito evaluación y protección adecuadas. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Quién descubrió la penicilina?",
+    "id": 31,
+    "nivel": "Difícil",
+    "tiempo": 50,
+    "q": "Un compañero está confuso y habla raro en una jornada de mucho calor.",
     "o": [
-      "Pasteur",
-      "Fleming",
-      "Koch",
-      "Salk"
+      "Le pido que termine y luego descanse.",
+      "Activo asistencia médica urgente, interrumpo la tarea e inicio enfriamiento seguro sin dejarlo solo.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 1
+    "c": 1,
+    "explicacion": "La decisión esperada es: Activo asistencia médica urgente, interrumpo la tarea e inicio enfriamiento seguro sin dejarlo solo. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es la capital de Brasil?",
+    "id": 32,
+    "nivel": "Difícil",
+    "tiempo": 50,
+    "q": "Una persona se desploma dentro de un depósito cerrado sin evaluación de atmósfera.",
     "o": [
-      "Río de Janeiro",
-      "São Paulo",
-      "Brasilia",
-      "Salvador"
+      "No ingreso; activo emergencias y rescate especializado e impido nuevos ingresos.",
+      "Entro conteniendo la respiración.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 2
+    "c": 0,
+    "explicacion": "La decisión esperada es: No ingreso; activo emergencias y rescate especializado e impido nuevos ingresos. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuántos días tiene un año bisiesto?",
+    "id": 33,
+    "nivel": "Difícil",
+    "tiempo": 50,
+    "q": "Un trabajador está atrapado en un mecanismo.",
     "o": [
-      "364",
-      "365",
-      "366",
-      "367"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Invierto la marcha para sacarlo.",
+      "Activo emergencias y detengo y aíslo el equipo de forma segura; no improviso su liberación.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 2
+    "c": 2,
+    "explicacion": "La decisión esperada es: Activo emergencias y detengo y aíslo el equipo de forma segura; no improviso su liberación. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Qué elemento químico tiene el símbolo 'Fe'?",
+    "id": 34,
+    "nivel": "Difícil",
+    "tiempo": 50,
+    "q": "Hay un cable eléctrico caído cerca de la ruta interna.",
     "o": [
-      "Flúor",
-      "Hierro",
-      "Fósforo",
-      "Francio"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Mantengo a todos alejados y aviso a emergencias y al operador eléctrico.",
+      "Lo aparto con una herramienta."
     ],
-    "c": 1
+    "c": 2,
+    "explicacion": "La decisión esperada es: Mantengo a todos alejados y aviso a emergencias y al operador eléctrico. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es el idioma oficial de Brasil?",
+    "id": 35,
+    "nivel": "Difícil",
+    "tiempo": 50,
+    "q": "Un equipo toca una línea eléctrica y vos estás fuera, cerca de él.",
     "o": [
-      "Español",
-      "Portugués",
-      "Inglés",
-      "Francés"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Voy a ayudar sujetando el equipo.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "No me acerco ni lo toco; mantengo alejados a otros y activo asistencia especializada."
     ],
-    "c": 1
+    "c": 3,
+    "explicacion": "La decisión esperada es: No me acerco ni lo toco; mantengo alejados a otros y activo asistencia especializada. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Quién fue Cleopatra?",
+    "id": 36,
+    "nivel": "Difícil",
+    "tiempo": 50,
+    "q": "Un compañero te pide entrar a un silo de granos sin procedimiento de ingreso.",
     "o": [
-      "Reina de Egipto",
-      "Emperatriz romana",
-      "Diosa griega",
-      "Científica"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Entro si otro me observa desde arriba.",
+      "No ingreso y solicito evaluación y controles especializados antes de cualquier entrada.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 0
+    "c": 2,
+    "explicacion": "La decisión esperada es: No ingreso y solicito evaluación y controles especializados antes de cualquier entrada. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuántos segundos tiene un minuto?",
+    "id": 37,
+    "nivel": "Difícil",
+    "tiempo": 50,
+    "q": "Un responsable exige reiniciar con un resguardo todavía defectuoso.",
     "o": [
-      "30",
-      "60",
-      "90",
-      "100"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Reinicio a menor velocidad.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Mantengo suspendida la tarea insegura y escalo el riesgo por el canal establecido."
     ],
-    "c": 1
+    "c": 3,
+    "explicacion": "La decisión esperada es: Mantengo suspendida la tarea insegura y escalo el riesgo por el canal establecido. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es el desierto más grande del mundo?",
+    "id": 38,
+    "nivel": "Difícil",
+    "tiempo": 50,
+    "q": "Apagaron el motor pero nadie verificó energías almacenadas.",
     "o": [
-      "Sahara",
-      "Gobi",
-      "Atacama",
-      "Antártico"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "No autorizo intervenir hasta completar aislamiento, aseguramiento y verificación por personal competente.",
+      "Espero un minuto y comienzo."
     ],
-    "c": 3
+    "c": 2,
+    "explicacion": "La decisión esperada es: No autorizo intervenir hasta completar aislamiento, aseguramiento y verificación por personal competente. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Qué planeta está más cerca del Sol?",
+    "id": 39,
+    "nivel": "Difícil",
+    "tiempo": 50,
+    "q": "Una alarma suena mientras un encargado dice que probablemente es una prueba.",
     "o": [
-      "Venus",
-      "Tierra",
-      "Mercurio",
-      "Marte"
+      "Sigo el procedimiento de alarma y verifico por el canal establecido, sin asumir que es falsa.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "La ignoro hasta que se confirme una emergencia.",
+      "Continúo la tarea y aviso al finalizar el turno."
     ],
-    "c": 2
+    "c": 0,
+    "explicacion": "La decisión esperada es: Sigo el procedimiento de alarma y verifico por el canal establecido, sin asumir que es falsa. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es la capital de Canadá?",
+    "id": 40,
+    "nivel": "Difícil",
+    "tiempo": 50,
+    "q": "Detectás humo en un depósito con productos desconocidos.",
     "o": [
-      "Toronto",
-      "Vancouver",
-      "Ottawa",
-      "Montreal"
+      "Entro a buscar qué se está quemando.",
+      "Me retiro, aviso y activo el procedimiento sin entrar ni intentar combatirlo sin condiciones y formación.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 2
+    "c": 1,
+    "explicacion": "La decisión esperada es: Me retiro, aviso y activo el procedimiento sin entrar ni intentar combatirlo sin condiciones y formación. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuántas cuerdas tiene una guitarra estándar?",
+    "id": 41,
+    "nivel": "Experto",
+    "tiempo": 60,
+    "q": "Falta poco para terminar y el personal autorizado para una reparación se fue.",
     "o": [
-      "4",
-      "5",
-      "6",
-      "7"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Reparto la reparación entre quienes quedan.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Mantengo el equipo fuera de servicio y reorganizo el trabajo hasta contar con personal competente."
     ],
-    "c": 2
+    "c": 3,
+    "explicacion": "La decisión esperada es: Mantengo el equipo fuera de servicio y reorganizo el trabajo hasta contar con personal competente. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Quién escribió 'Cien años de soledad'?",
+    "id": 42,
+    "nivel": "Experto",
+    "tiempo": 60,
+    "q": "Durante un relevo, dos personas creen que la otra controla el bloqueo.",
     "o": [
-      "Borges",
-      "García Márquez",
-      "Neruda",
-      "Cortázar"
+      "No inicio; aclaro responsables y verifico el control de energías conforme al procedimiento.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Confío en que alguno lo habrá hecho."
     ],
-    "c": 1
+    "c": 0,
+    "explicacion": "La decisión esperada es: No inicio; aclaro responsables y verifico el control de energías conforme al procedimiento. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es el mamífero más grande del mundo?",
+    "id": 43,
+    "nivel": "Experto",
+    "tiempo": 60,
+    "q": "Tras un atasco resuelto, quedan personas cerca del equipo y piden reiniciar.",
     "o": [
-      "Elefante",
-      "Ballena azul",
-      "Ballena jorobada",
-      "Orca"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Mantengo detenido hasta verificar zona despejada y cumplir el procedimiento de puesta en marcha.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Reinicio después de tocar bocina."
     ],
-    "c": 1
+    "c": 1,
+    "explicacion": "La decisión esperada es: Mantengo detenido hasta verificar zona despejada y cumplir el procedimiento de puesta en marcha. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿En qué año cayó el Muro de Berlín?",
+    "id": 44,
+    "nivel": "Experto",
+    "tiempo": 60,
+    "q": "Una reparación cambia el funcionamiento del equipo sin actualizar instrucciones.",
     "o": [
-      "1985",
-      "1989",
-      "1991",
-      "1993"
+      "Solicito evaluación y actualización de controles e instrucciones antes de usarlo.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Lo pruebo en producción para entender el cambio.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 1
+    "c": 0,
+    "explicacion": "La decisión esperada es: Solicito evaluación y actualización de controles e instrucciones antes de usarlo. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es la capital de Rusia?",
+    "id": 45,
+    "nivel": "Experto",
+    "tiempo": 60,
+    "q": "Un trabajador nuevo no entiende el aviso de peligro por una barrera de idioma.",
     "o": [
-      "San Petersburgo",
-      "Moscú",
-      "Kiev",
-      "Minsk"
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Le indico que siga a un compañero.",
+      "Detengo la tarea expuesta y aseguro una explicación comprensible y confirmación de lo entendido.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 1
+    "c": 2,
+    "explicacion": "La decisión esperada es: Detengo la tarea expuesta y aseguro una explicación comprensible y confirmación de lo entendido. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuántos lados tiene un triángulo?",
+    "id": 46,
+    "nivel": "Experto",
+    "tiempo": 60,
+    "q": "Hubo un incidente sin lesión y piden no registrarlo para evitar demoras.",
     "o": [
-      "2",
-      "3",
-      "4",
-      "5"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "No lo registro porque nadie se lastimó.",
+      "Informo por el canal establecido y participo en revisar causas y controles.",
+      "Continúo la tarea y aviso al finalizar el turno."
     ],
-    "c": 1
+    "c": 2,
+    "explicacion": "La decisión esperada es: Informo por el canal establecido y participo en revisar causas y controles. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Qué gas respiran los humanos principalmente?",
+    "id": 47,
+    "nivel": "Experto",
+    "tiempo": 60,
+    "q": "Se abre una ruta alternativa que pasa por una zona no evaluada.",
     "o": [
-      "Nitrógeno",
-      "Oxígeno",
-      "Dióxido de carbono",
-      "Helio"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "No desvío el equipo hasta evaluar el recorrido y autorizar una ruta segura.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "La uso si parece transitable."
     ],
-    "c": 1
+    "c": 1,
+    "explicacion": "La decisión esperada es: No desvío el equipo hasta evaluar el recorrido y autorizar una ruta segura. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuál es la capital de Argentina?",
+    "id": 48,
+    "nivel": "Experto",
+    "tiempo": 60,
+    "q": "El rescate de una persona exige entrar en un espacio confinado y no hay equipo especializado.",
     "o": [
-      "Córdoba",
-      "Rosario",
-      "Buenos Aires",
-      "Mendoza"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Organizo una cadena humana para entrar.",
+      "Activo el rescate especializado y evito ingresos improvisados, manteniendo el control del acceso."
     ],
-    "c": 2
+    "c": 3,
+    "explicacion": "La decisión esperada es: Activo el rescate especializado y evito ingresos improvisados, manteniendo el control del acceso. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Quién pintó 'La noche estrellada'?",
+    "id": 49,
+    "nivel": "Experto",
+    "tiempo": 60,
+    "q": "Quieren retomar después de una tormenta con daños eléctricos visibles.",
     "o": [
-      "Monet",
-      "Van Gogh",
-      "Picasso",
-      "Rembrandt"
+      "Retomo porque ya dejó de llover.",
+      "Mantengo la zona restringida y solicito evaluación competente antes del reinicio.",
+      "Continúo la tarea y aviso al finalizar el turno.",
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea."
     ],
-    "c": 1
+    "c": 1,
+    "explicacion": "La decisión esperada es: Mantengo la zona restringida y solicito evaluación competente antes del reinicio. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   },
   {
-    "q": "¿Cuántos grados tiene un círculo completo?",
+    "id": 50,
+    "nivel": "Experto",
+    "tiempo": 60,
+    "q": "La meta de producción solo parece alcanzable omitiendo controles de seguridad.",
     "o": [
-      "180",
-      "270",
-      "360",
-      "450"
+      "Dejo que otro lo resuelva sin comunicar el riesgo ni coordinar la tarea.",
+      "Comunico la incompatibilidad y replanteo recursos, plazos o método sin omitir los controles.",
+      "Acepto la excepción para cumplir la meta.",
+      "Continúo la tarea y aviso al finalizar el turno."
     ],
-    "c": 2
+    "c": 1,
+    "explicacion": "La decisión esperada es: Comunico la incompatibilidad y replanteo recursos, plazos o método sin omitir los controles. La urgencia no sustituye los controles, la capacitación ni el procedimiento específico del establecimiento."
   }
 ]
