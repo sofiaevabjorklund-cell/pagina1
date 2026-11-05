@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test de Situaciones del Campo</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{min-height:100vh;background:linear-gradient(160deg,#0b3d2e,#14532d,#166534);color:#fff;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);border-radius:20px;padding:28px;max-width:720px;width:100%;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+h1{font-size:26px;margin-bottom:8px}
+p{opacity:.9;line-height:1.5}
+button{width:100%;border:0;border-radius:14px;padding:16px;font-size:18px;font-weight:bold;cursor:pointer;background:#facc15;color:#1f2937;margin-top:18px;transition:.2s}
+button:hover{transform:translateY(-2px)}
+button:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.option{display:block;width:100%;text-align:left;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:14px;padding:14px;margin-top:10px;font-size:16px;cursor:pointer}
+.option:hover:not(:disabled){background:rgba(255,255,255,.2)}
+.option.correct{background:#16a34a;border-color:#22c55e}
+.option.wrong{background:#dc2626;border-color:#ef4444}
+.option:disabled{cursor:not-allowed;opacity:.85}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px;font-weight:bold}
+.timer{background:rgba(0,0,0,.25);padding:8px 14px;border-radius:999px}
+.timer.low{background:#dc2626}
+.lives{background:rgba(0,0,0,.25);padding:8px 14px;border-radius:999px}
+.lives.low{background:#dc2626}
+.hidden{display:none}
+.feedback{margin-top:14px;padding:12px;border-radius:12px;background:rgba(0,0,0,.25)}
+.progress{height:8px;background:rgba(255,255,255,.15);border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress div{height:100%;background:#facc15;width:0;transition:.3s}
+</style>
+</head>
+<body>
+<div class="card">
+  <section id="start">
+    <h1>🌾 Test de Situaciones del Campo</h1>
+    <p>Respondé 25 situaciones que pueden suceder en el trabajo. Cada una tiene cuatro opciones y solo una es la más segura y correcta.</p>
+    <p>Tenés <strong>3 vidas</strong> representadas por maíces: 🌽🌽🌽. Si respondés mal o se acaba el tiempo, perdés una vida.</p>
+    <button id="startBtn">Iniciar juego</button>
+    <p id="loadMsg" class="hidden" style="margin-top:12px"></p>
+  </section>
+
+  <section id="quiz" class="hidden">
+    <div class="top">
+      <span id="counter">Pregunta 1 de 25</span>
+      <span id="timer" class="timer">7 s</span>
+      <span id="lives" class="lives">🌽🌽🌽</span>
+    </div>
+    <div class="progress"><div id="bar"></div></div>
+    <h2 id="question"></h2>
+    <div id="options"></div>
+    <div id="feedback" class="feedback hidden"></div>
+  </section>
+
+  <section id="end" class="hidden">
+    <h1 id="endTitle">✅ Test finalizado</h1>
+    <p id="result"></p>
+    <button id="restartBtn">Jugar de nuevo</button>
+  </section>
+</div>
+
+<script>
+const TIME_PER_QUESTION = 7;
+const MAX_LIVES = 3;
+const QUESTIONS_FALLBACK = [{"nivel": "Básico", "tiempo": 7, "q": "Te asignan una máquina que nunca operaste.", "o": ["Empiezo a trabajar para no retrasar al equipo.", "Le pido a un compañero que la opere por mí.", "Pruebo los controles mientras avanzo.", "Pido capacitación y autorización antes de operarla."], "c": 3, "explicacion": "Nunca se debe operar un equipo sin capacitación y autorización."}, {"nivel": "Básico", "tiempo": 7, "q": "Ves un charco de aceite cerca de la zona de trabajo.", "o": ["Lo señalizó y aviso al responsable.", "Espero a que alguien más lo vea.", "Lo ignoro porque no es mi tarea.", "Lo tapo con tierra y sigo trabajando."], "c": 0, "explicacion": "Los derrames deben señalizarse y reportarse para evitar caídas o incendios."}, {"nivel": "Básico", "tiempo": 7, "q": "El casco de seguridad está rajado.", "o": ["Lo reemplazo antes de comenzar.", "Lo uso igual, solo tiene una rajadura.", "Lo presto a otro compañero.", "Lo guardo para usarlo otro día."], "c": 0, "explicacion": "Un EPP dañado no protege y debe reemplazarse."}, {"nivel": "Básico", "tiempo": 7, "q": "Debes levantar una carga pesada sola.", "o": ["La levanto aunque me cueste.", "La arrastro hasta el lugar.", "Pido ayuda o uso elementos de izaje.", "La levanto rápido con la espalda recta."], "c": 2, "explicacion": "Las cargas pesadas requieren ayuda mecánica o trabajo en equipo."}, {"nivel": "Básico", "tiempo": 7, "q": "No encuentras tus guantes de trabajo.", "o": ["Uso guantes de otra tarea aunque no sirvan.", "Termino la tarea y después los busco.", "Trabajo sin guantes por un rato.", "Aviso y consigo un par adecuado."], "c": 3, "explicacion": "Los EPP deben estar completos y adecuados antes de iniciar."}, {"nivel": "Básico", "tiempo": 7, "q": "Un compañero no usa protección auditiva en una zona ruidosa.", "o": ["Le presto mis tapones cuando termine.", "No digo nada para no molestar.", "Le recuerdo usarla y aviso si persiste.", "Sigo trabajando y lo ignoro."], "c": 2, "explicacion": "La protección auditiva es obligatoria en zonas ruidosas."}, {"nivel": "Básico", "tiempo": 7, "q": "Ves que una herramienta eléctrica tiene el cable pelado.", "o": ["La dejo conectada para otro turno.", "La uso con cuidado.", "La saco de servicio y la reporto.", "La cinto con cinta y sigo."], "c": 2, "explicacion": "Un cable dañado puede causar electrocución; debe retirarse de servicio."}, {"nivel": "Básico", "tiempo": 7, "q": "Comienza a llover fuerte mientras trabajás al aire libre.", "o": ["Me pongo a resguardo y sigo las indicaciones.", "Espero debajo de una máquina.", "Sigo trabajando más rápido.", "Me refugio bajo un árbol."], "c": 0, "explicacion": "Hay que buscar refugio seguro; los árboles y maquinaria pueden ser peligrosos."}, {"nivel": "Intermedio", "tiempo": 7, "q": "Un tractor comienza a hacer un ruido extraño durante la tarea.", "o": ["Sigo hasta terminar la jornada.", "Lo detengo en forma segura y aviso a mantenimiento.", "Aumento la velocidad para ver si se acomoda.", "Bajo del tractor mientras está en movimiento."], "c": 1, "explicacion": "Una falla mecánica debe atenderse deteniendo el equipo de forma segura."}, {"nivel": "Intermedio", "tiempo": 7, "q": "Debés reparar una máquina y otro compañero intenta encenderla.", "o": ["Dejo la llave puesta para avisarle.", "Le pido que espere sin más.", "Aplico bloqueo y etiquetado antes de intervenir.", "Trabajo rápido antes de que la encienda."], "c": 2, "explicacion": "El bloqueo y etiquetado evita arranques accidentales durante reparaciones."}, {"nivel": "Intermedio", "tiempo": 7, "q": "Hay mucho polvo y la visibilidad disminuye en el camino rural.", "o": ["Detengo el vehículo en la curva.", "Reduzco la velocidad y uso luces si corresponde.", "Mantengo la misma velocidad.", "Adelanto a otro vehículo rápido."], "c": 1, "explicacion": "Con baja visibilidad hay que reducir velocidad, aumentar distancia y evitar maniobras riesgosas."}, {"nivel": "Intermedio", "tiempo": 7, "q": "Un compañero sufre un corte en la mano.", "o": ["Le presto mi guante para tapar la herida.", "Le digo que se lave la mano y siga.", "Activo el protocolo de primeros auxilios y aviso.", "Espero a ver si corta mucho."], "c": 2, "explicacion": "Ante una lesión se debe activar el protocolo, atender y reportar."}, {"nivel": "Intermedio", "tiempo": 7, "q": "El tanque de combustible comienza a perder líquido cerca de una fuente de calor.", "o": ["Detengo la actividad, alejo fuentes de ignición y aviso.", "Tapo la fuga con un trapo.", "Sigo trabajando con cuidado.", "Enciendo una luz para ver mejor."], "c": 0, "explicacion": "Los derrames de combustible requieren retirar fuentes de ignición y reporte inmediato."}, {"nivel": "Intermedio", "tiempo": 7, "q": "Debés trabajar cerca de un zanjón profundo.", "o": ["Bajo al zanjón si es más corto.", "Trabajo rápido para terminar antes.", "Me acerco al borde para ver mejor.", "Verifico señalización, barandas y permiso necesario."], "c": 3, "explicacion": "Las excavaciones requieren protección contra caídas y evaluación previa."}, {"nivel": "Intermedio", "tiempo": 7, "q": "Un animal se acerca de forma impredecible en el corral.", "o": ["Me pongo entre el animal y la salida.", "Le grito y corro hacia él.", "Lo agarro para controlarlo.", "Mantengo distancia y sigo el protocolo de manejo."], "c": 3, "explicacion": "Con animales hay que mantener distancia, rutas de escape y protocolos de manejo."}, {"nivel": "Intermedio", "tiempo": 7, "q": "El clima anuncia tormenta eléctrica mientras operás maquinaria.", "o": ["Suspendo la tarea y busco refugio seguro.", "Sigo hasta que empiece a llover.", "Me quedo en la cabina abierta.", "Acelero para terminar antes."], "c": 0, "explicacion": "Ante tormenta eléctrica se debe suspender y refugiarse en lugar seguro."}, {"nivel": "Intermedio", "tiempo": 7, "q": "Ves que un compañero usa el teléfono mientras maneja un vehículo de trabajo.", "o": ["Le pido que se detenga y se concentre en manejar.", "No digo nada, es su responsabilidad.", "Le aviso cuando lleguemos.", "Tomo una foto para reportarlo después."], "c": 0, "explicacion": "El uso del teléfono al conducir es una distracción grave y debe corregirse de inmediato."}, {"nivel": "Intermedio", "tiempo": 7, "q": "La escalera que vas a usar tiene un peldaño flojo.", "o": ["La uso sosteniéndome bien.", "La presto igual a otro compañero.", "La reparo mientras estoy subido.", "No la uso y solicito una escalera en buen estado."], "c": 3, "explicacion": "Una escalera defectuosa debe retirarse de servicio."}, {"nivel": "Avanzado", "tiempo": 7, "q": "Durante la cosecha, una máquina se atasca y hay presión por avanzar.", "o": ["Sigo operando para ver si se suelta.", "Pido a otro que la encienda mientras la reviso.", "Detengo la máquina, bloqueo la energía y sigo el procedimiento.", "Meto la mano para destrabarla rápido."], "c": 2, "explicacion": "Nunca se interviene en una máquina en movimiento; primero se detiene y bloquea."}, {"nivel": "Avanzado", "tiempo": 7, "q": "Hay un derrame químico y el viento empuja el vapor hacia el equipo.", "o": ["Sigo trabajando con mascarilla común.", "Evacuo según el protocolo, me protejo y aviso.", "Me acerco para identificar el producto.", "Lavo el derrame con agua sin más."], "c": 1, "explicacion": "Ante productos químicos se debe evacuar, protegerse y activar el protocolo correspondiente."}, {"nivel": "Avanzado", "tiempo": 7, "q": "Un compañero queda atrapado parcialmente por maquinaria.", "o": ["Lo saco tirando con fuerza.", "Espero a que llegue el supervisor sin hacer nada.", "Corto la energía, activo emergencia y no lo muevo innecesariamente.", "Enciendo la máquina para liberarlo."], "c": 2, "explicacion": "Primero se corta la energía y se activa la emergencia; mover a la víctima puede agravar lesiones."}, {"nivel": "Avanzado", "tiempo": 7, "q": "El supervisor pide terminar una tarea que requiere un permiso de trabajo que aún no está aprobado.", "o": ["Explico que no puedo iniciar sin el permiso aprobado.", "Empiezo porque hay presión de tiempo.", "Pido a otro que firme por mí.", "Hago la tarea sin avisar a nadie."], "c": 0, "explicacion": "Los permisos de trabajo son obligatorios; la presión no justifica omitirlos."}, {"nivel": "Avanzado", "tiempo": 7, "q": "Detectás una fuga de gas y hay personas cerca.", "o": ["Activo la alarma, evacuo la zona y aviso al responsable.", "Busco la fuga con un encendedor.", "Espero a que el olor desaparezca.", "Abro ventanas y sigo trabajando."], "c": 0, "explicacion": "Ante gas se debe evacuar, evitar fuentes de ignición y activar la alarma."}, {"nivel": "Avanzado", "tiempo": 7, "q": "Un incendio pequeño comienza cerca de materiales combustibles.", "o": ["Activo la alarma y uso el extintor solo si estoy capacitado y es seguro.", "Intento apagarlo con agua sin evaluar.", "Corro a buscar ayuda sin avisar a nadie.", "Lo ignoro porque es pequeño."], "c": 0, "explicacion": "Se activa la alarma y solo se combate un incendio inicial si hay capacitación y seguridad."}, {"nivel": "Avanzado", "tiempo": 7, "q": "Debés cumplir un plazo, pero el procedimiento seguro requiere más tiempo.", "o": ["Pido a compañeros que trabajen más rápido sin protección.", "Comunico el riesgo y ajusto el plan con el supervisor.", "Salto pasos del procedimiento.", "Hago la tarea igual pero sin reportarlo."], "c": 1, "explicacion": "La seguridad nunca se negocia; los riesgos deben comunicarse y planificarse."}];
+let questions = [];
+let current = 0;
+let score = 0;
+let lives = MAX_LIVES;
+let timeLeft = TIME_PER_QUESTION;
+let timerId = null;
+let locked = false;
+
+const $ = id => document.getElementById(id);
+const startScreen=$("start"), quizScreen=$("quiz"), endScreen=$("end");
+const startBtn=$("startBtn"), loadMsg=$("loadMsg");
+const counter=$("counter"), timerEl=$("timer"), livesEl=$("lives"), questionEl=$("question");
+const optionsEl=$("options"), feedbackEl=$("feedback"), bar=$("bar");
+
+function normalize(list){
+  return (list||[]).map(q=>({
+    q:q.q||q.pregunta||"",
+    o:q.o||q.opciones||[],
+    c:typeof q.c==="number"?q.c:(q.correcta!==undefined?Number(q.correcta):0),
+    tiempo:TIME_PER_QUESTION,
+    explicacion:q.explicacion||""
+  })).filter(q=>q.q&&Array.isArray(q.o)&&q.o.length===4&&q.c>=0&&q.c<4);
+}
+
+async function loadQuestions(){
+  startBtn.disabled = true;
+  try{
+    const res = await fetch("preguntas.json", {cache:"no-store"});
+    if(!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    const list = Array.isArray(data) ? data : (data.preguntas || data.situaciones || []);
+    questions = normalize(list);
+    if(!questions.length) throw new Error("JSON vacío");
+  }catch(e){
+    questions = normalize(QUESTIONS_FALLBACK);
+    loadMsg.classList.remove("hidden");
+    loadMsg.textContent = "No se pudo leer preguntas.json; se usó la copia incluida. Verificá que ambos archivos estén en la misma carpeta del repositorio.";
+  }
+  startBtn.disabled = false;
+}
+
+function shuffle(a){return a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);}
+
+function beep(){
+  try{
+    const ctx = new (window.AudioContext||window.webkitAudioContext)();
+    const osc = ctx.createOscillator(), gain = ctx.createGain();
+    osc.connect(gain); gain.connect(ctx.destination);
+    osc.frequency.value = 880; gain.gain.value=.08;
+    osc.start(); setTimeout(()=>{osc.stop();ctx.close();},180);
+  }catch(e){}
+}
+
+function updateLives(){
+  livesEl.textContent = "🌽".repeat(lives) + "🖤".repeat(MAX_LIVES - lives);
+  livesEl.classList.toggle("low", lives <= 1);
+}
+
+function startGame(){
+  questions = shuffle(questions);
+  current=0; score=0; lives=MAX_LIVES;
+  updateLives();
+  startScreen.classList.add("hidden");
+  endScreen.classList.add("hidden");
+  quizScreen.classList.remove("hidden");
+  showQuestion();
+}
+
+function showQuestion(){
+  locked=false;
+  feedbackEl.classList.add("hidden");
+  feedbackEl.innerHTML="";
+  const q=questions[current];
+  counter.textContent=`Pregunta ${current+1} de ${questions.length}`;
+  bar.style.width=`${(current/questions.length)*100}%`;
+  questionEl.textContent=q.q;
+  optionsEl.innerHTML="";
+
+  // Las opciones se mezclan aleatoriamente en cada pregunta.
+  const order = shuffle(q.o.map((_, i) => i));
+  q.shuffledOptions = order.map(i => q.o[i]);
+  q.shuffledCorrect = order.indexOf(q.c);
+
+  q.shuffledOptions.forEach((text,i)=>{
+    const b=document.createElement("button");
+    b.className="option"; b.textContent=text;
+    b.onclick=()=>answer(i,b);
+    optionsEl.appendChild(b);
+  });
+
+  timeLeft=TIME_PER_QUESTION;
+  timerEl.textContent=timeLeft+" s";
+  timerEl.classList.remove("low");
+  clearInterval(timerId);
+  timerId=setInterval(()=>{
+    timeLeft--;
+    timerEl.textContent=timeLeft+" s";
+    if(timeLeft<=3){timerEl.classList.add("low");beep();}
+    if(timeLeft<=0){clearInterval(timerId);answer(-1,null);}
+  },1000);
+}
+
+function answer(i,btn){
+  if(locked)return;
+  locked=true;
+  clearInterval(timerId);
+  const q=questions[current];
+  const correctIndex=q.shuffledCorrect;
+  const buttons=[...optionsEl.children];
+
+  buttons.forEach((b,idx)=>{
+    b.disabled=true;
+    if(idx===correctIndex)b.classList.add("correct");
+    else if(idx===i)b.classList.add("wrong");
+  });
+
+  const isCorrect = i===correctIndex;
+  if(isCorrect){
+    score++;
+  }else{
+    lives--;
+    updateLives();
+  }
+
+  feedbackEl.classList.remove("hidden");
+  feedbackEl.innerHTML=(isCorrect
+    ? "<strong>✅ Correcto.</strong> "
+    : (i===-1 ? "<strong>⏱️ Tiempo agotado. Perdiste una vida. </strong>" : "<strong>❌ Incorrecto. Perdiste una vida. </strong>"))
+    + (q.explicacion||"");
+
+  setTimeout(()=>{
+    if(lives<=0){
+      finish(true);
+      return;
+    }
+    current++;
+    if(current<questions.length)showQuestion();
+    else finish(false);
+  },2200);
+}
+
+function finish(outOfLives){
+  clearInterval(timerId);
+  quizScreen.classList.add("hidden");
+  endScreen.classList.remove("hidden");
+  $("endTitle").textContent = outOfLives ? "🌽 Te quedaste sin vidas" : "✅ Test finalizado";
+  const pct=Math.round(score/questions.length*100);
+  $("result").textContent=`Obtuviste ${score} de ${questions.length} respuestas correctas (${pct}%).`;
+}
+
+startBtn.onclick=startGame;
+$("restartBtn").onclick=()=>{endScreen.classList.add("hidden");startScreen.classList.remove("hidden");};
+loadQuestions();
+</script>
+</body>
+</html>

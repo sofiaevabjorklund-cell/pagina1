@@ -1,1 +1,327 @@
-
+[
+  {
+    "nivel": "Básico",
+    "tiempo": 7,
+    "q": "Te asignan una máquina que nunca operaste.",
+    "o": [
+      "Empiezo a trabajar para no retrasar al equipo.",
+      "Le pido a un compañero que la opere por mí.",
+      "Pruebo los controles mientras avanzo.",
+      "Pido capacitación y autorización antes de operarla."
+    ],
+    "c": 3,
+    "explicacion": "Nunca se debe operar un equipo sin capacitación y autorización."
+  },
+  {
+    "nivel": "Básico",
+    "tiempo": 7,
+    "q": "Ves un charco de aceite cerca de la zona de trabajo.",
+    "o": [
+      "Lo señalizó y aviso al responsable.",
+      "Espero a que alguien más lo vea.",
+      "Lo ignoro porque no es mi tarea.",
+      "Lo tapo con tierra y sigo trabajando."
+    ],
+    "c": 0,
+    "explicacion": "Los derrames deben señalizarse y reportarse para evitar caídas o incendios."
+  },
+  {
+    "nivel": "Básico",
+    "tiempo": 7,
+    "q": "El casco de seguridad está rajado.",
+    "o": [
+      "Lo reemplazo antes de comenzar.",
+      "Lo uso igual, solo tiene una rajadura.",
+      "Lo presto a otro compañero.",
+      "Lo guardo para usarlo otro día."
+    ],
+    "c": 0,
+    "explicacion": "Un EPP dañado no protege y debe reemplazarse."
+  },
+  {
+    "nivel": "Básico",
+    "tiempo": 7,
+    "q": "Debes levantar una carga pesada sola.",
+    "o": [
+      "La levanto aunque me cueste.",
+      "La arrastro hasta el lugar.",
+      "Pido ayuda o uso elementos de izaje.",
+      "La levanto rápido con la espalda recta."
+    ],
+    "c": 2,
+    "explicacion": "Las cargas pesadas requieren ayuda mecánica o trabajo en equipo."
+  },
+  {
+    "nivel": "Básico",
+    "tiempo": 7,
+    "q": "No encuentras tus guantes de trabajo.",
+    "o": [
+      "Uso guantes de otra tarea aunque no sirvan.",
+      "Termino la tarea y después los busco.",
+      "Trabajo sin guantes por un rato.",
+      "Aviso y consigo un par adecuado."
+    ],
+    "c": 3,
+    "explicacion": "Los EPP deben estar completos y adecuados antes de iniciar."
+  },
+  {
+    "nivel": "Básico",
+    "tiempo": 7,
+    "q": "Un compañero no usa protección auditiva en una zona ruidosa.",
+    "o": [
+      "Le presto mis tapones cuando termine.",
+      "No digo nada para no molestar.",
+      "Le recuerdo usarla y aviso si persiste.",
+      "Sigo trabajando y lo ignoro."
+    ],
+    "c": 2,
+    "explicacion": "La protección auditiva es obligatoria en zonas ruidosas."
+  },
+  {
+    "nivel": "Básico",
+    "tiempo": 7,
+    "q": "Ves que una herramienta eléctrica tiene el cable pelado.",
+    "o": [
+      "La dejo conectada para otro turno.",
+      "La uso con cuidado.",
+      "La saco de servicio y la reporto.",
+      "La cinto con cinta y sigo."
+    ],
+    "c": 2,
+    "explicacion": "Un cable dañado puede causar electrocución; debe retirarse de servicio."
+  },
+  {
+    "nivel": "Básico",
+    "tiempo": 7,
+    "q": "Comienza a llover fuerte mientras trabajás al aire libre.",
+    "o": [
+      "Me pongo a resguardo y sigo las indicaciones.",
+      "Espero debajo de una máquina.",
+      "Sigo trabajando más rápido.",
+      "Me refugio bajo un árbol."
+    ],
+    "c": 0,
+    "explicacion": "Hay que buscar refugio seguro; los árboles y maquinaria pueden ser peligrosos."
+  },
+  {
+    "nivel": "Intermedio",
+    "tiempo": 7,
+    "q": "Un tractor comienza a hacer un ruido extraño durante la tarea.",
+    "o": [
+      "Sigo hasta terminar la jornada.",
+      "Lo detengo en forma segura y aviso a mantenimiento.",
+      "Aumento la velocidad para ver si se acomoda.",
+      "Bajo del tractor mientras está en movimiento."
+    ],
+    "c": 1,
+    "explicacion": "Una falla mecánica debe atenderse deteniendo el equipo de forma segura."
+  },
+  {
+    "nivel": "Intermedio",
+    "tiempo": 7,
+    "q": "Debés reparar una máquina y otro compañero intenta encenderla.",
+    "o": [
+      "Dejo la llave puesta para avisarle.",
+      "Le pido que espere sin más.",
+      "Aplico bloqueo y etiquetado antes de intervenir.",
+      "Trabajo rápido antes de que la encienda."
+    ],
+    "c": 2,
+    "explicacion": "El bloqueo y etiquetado evita arranques accidentales durante reparaciones."
+  },
+  {
+    "nivel": "Intermedio",
+    "tiempo": 7,
+    "q": "Hay mucho polvo y la visibilidad disminuye en el camino rural.",
+    "o": [
+      "Detengo el vehículo en la curva.",
+      "Reduzco la velocidad y uso luces si corresponde.",
+      "Mantengo la misma velocidad.",
+      "Adelanto a otro vehículo rápido."
+    ],
+    "c": 1,
+    "explicacion": "Con baja visibilidad hay que reducir velocidad, aumentar distancia y evitar maniobras riesgosas."
+  },
+  {
+    "nivel": "Intermedio",
+    "tiempo": 7,
+    "q": "Un compañero sufre un corte en la mano.",
+    "o": [
+      "Le presto mi guante para tapar la herida.",
+      "Le digo que se lave la mano y siga.",
+      "Activo el protocolo de primeros auxilios y aviso.",
+      "Espero a ver si corta mucho."
+    ],
+    "c": 2,
+    "explicacion": "Ante una lesión se debe activar el protocolo, atender y reportar."
+  },
+  {
+    "nivel": "Intermedio",
+    "tiempo": 7,
+    "q": "El tanque de combustible comienza a perder líquido cerca de una fuente de calor.",
+    "o": [
+      "Detengo la actividad, alejo fuentes de ignición y aviso.",
+      "Tapo la fuga con un trapo.",
+      "Sigo trabajando con cuidado.",
+      "Enciendo una luz para ver mejor."
+    ],
+    "c": 0,
+    "explicacion": "Los derrames de combustible requieren retirar fuentes de ignición y reporte inmediato."
+  },
+  {
+    "nivel": "Intermedio",
+    "tiempo": 7,
+    "q": "Debés trabajar cerca de un zanjón profundo.",
+    "o": [
+      "Bajo al zanjón si es más corto.",
+      "Trabajo rápido para terminar antes.",
+      "Me acerco al borde para ver mejor.",
+      "Verifico señalización, barandas y permiso necesario."
+    ],
+    "c": 3,
+    "explicacion": "Las excavaciones requieren protección contra caídas y evaluación previa."
+  },
+  {
+    "nivel": "Intermedio",
+    "tiempo": 7,
+    "q": "Un animal se acerca de forma impredecible en el corral.",
+    "o": [
+      "Me pongo entre el animal y la salida.",
+      "Le grito y corro hacia él.",
+      "Lo agarro para controlarlo.",
+      "Mantengo distancia y sigo el protocolo de manejo."
+    ],
+    "c": 3,
+    "explicacion": "Con animales hay que mantener distancia, rutas de escape y protocolos de manejo."
+  },
+  {
+    "nivel": "Intermedio",
+    "tiempo": 7,
+    "q": "El clima anuncia tormenta eléctrica mientras operás maquinaria.",
+    "o": [
+      "Suspendo la tarea y busco refugio seguro.",
+      "Sigo hasta que empiece a llover.",
+      "Me quedo en la cabina abierta.",
+      "Acelero para terminar antes."
+    ],
+    "c": 0,
+    "explicacion": "Ante tormenta eléctrica se debe suspender y refugiarse en lugar seguro."
+  },
+  {
+    "nivel": "Intermedio",
+    "tiempo": 7,
+    "q": "Ves que un compañero usa el teléfono mientras maneja un vehículo de trabajo.",
+    "o": [
+      "Le pido que se detenga y se concentre en manejar.",
+      "No digo nada, es su responsabilidad.",
+      "Le aviso cuando lleguemos.",
+      "Tomo una foto para reportarlo después."
+    ],
+    "c": 0,
+    "explicacion": "El uso del teléfono al conducir es una distracción grave y debe corregirse de inmediato."
+  },
+  {
+    "nivel": "Intermedio",
+    "tiempo": 7,
+    "q": "La escalera que vas a usar tiene un peldaño flojo.",
+    "o": [
+      "La uso sosteniéndome bien.",
+      "La presto igual a otro compañero.",
+      "La reparo mientras estoy subido.",
+      "No la uso y solicito una escalera en buen estado."
+    ],
+    "c": 3,
+    "explicacion": "Una escalera defectuosa debe retirarse de servicio."
+  },
+  {
+    "nivel": "Avanzado",
+    "tiempo": 7,
+    "q": "Durante la cosecha, una máquina se atasca y hay presión por avanzar.",
+    "o": [
+      "Sigo operando para ver si se suelta.",
+      "Pido a otro que la encienda mientras la reviso.",
+      "Detengo la máquina, bloqueo la energía y sigo el procedimiento.",
+      "Meto la mano para destrabarla rápido."
+    ],
+    "c": 2,
+    "explicacion": "Nunca se interviene en una máquina en movimiento; primero se detiene y bloquea."
+  },
+  {
+    "nivel": "Avanzado",
+    "tiempo": 7,
+    "q": "Hay un derrame químico y el viento empuja el vapor hacia el equipo.",
+    "o": [
+      "Sigo trabajando con mascarilla común.",
+      "Evacuo según el protocolo, me protejo y aviso.",
+      "Me acerco para identificar el producto.",
+      "Lavo el derrame con agua sin más."
+    ],
+    "c": 1,
+    "explicacion": "Ante productos químicos se debe evacuar, protegerse y activar el protocolo correspondiente."
+  },
+  {
+    "nivel": "Avanzado",
+    "tiempo": 7,
+    "q": "Un compañero queda atrapado parcialmente por maquinaria.",
+    "o": [
+      "Lo saco tirando con fuerza.",
+      "Espero a que llegue el supervisor sin hacer nada.",
+      "Corto la energía, activo emergencia y no lo muevo innecesariamente.",
+      "Enciendo la máquina para liberarlo."
+    ],
+    "c": 2,
+    "explicacion": "Primero se corta la energía y se activa la emergencia; mover a la víctima puede agravar lesiones."
+  },
+  {
+    "nivel": "Avanzado",
+    "tiempo": 7,
+    "q": "El supervisor pide terminar una tarea que requiere un permiso de trabajo que aún no está aprobado.",
+    "o": [
+      "Explico que no puedo iniciar sin el permiso aprobado.",
+      "Empiezo porque hay presión de tiempo.",
+      "Pido a otro que firme por mí.",
+      "Hago la tarea sin avisar a nadie."
+    ],
+    "c": 0,
+    "explicacion": "Los permisos de trabajo son obligatorios; la presión no justifica omitirlos."
+  },
+  {
+    "nivel": "Avanzado",
+    "tiempo": 7,
+    "q": "Detectás una fuga de gas y hay personas cerca.",
+    "o": [
+      "Activo la alarma, evacuo la zona y aviso al responsable.",
+      "Busco la fuga con un encendedor.",
+      "Espero a que el olor desaparezca.",
+      "Abro ventanas y sigo trabajando."
+    ],
+    "c": 0,
+    "explicacion": "Ante gas se debe evacuar, evitar fuentes de ignición y activar la alarma."
+  },
+  {
+    "nivel": "Avanzado",
+    "tiempo": 7,
+    "q": "Un incendio pequeño comienza cerca de materiales combustibles.",
+    "o": [
+      "Activo la alarma y uso el extintor solo si estoy capacitado y es seguro.",
+      "Intento apagarlo con agua sin evaluar.",
+      "Corro a buscar ayuda sin avisar a nadie.",
+      "Lo ignoro porque es pequeño."
+    ],
+    "c": 0,
+    "explicacion": "Se activa la alarma y solo se combate un incendio inicial si hay capacitación y seguridad."
+  },
+  {
+    "nivel": "Avanzado",
+    "tiempo": 7,
+    "q": "Debés cumplir un plazo, pero el procedimiento seguro requiere más tiempo.",
+    "o": [
+      "Pido a compañeros que trabajen más rápido sin protección.",
+      "Comunico el riesgo y ajusto el plan con el supervisor.",
+      "Salto pasos del procedimiento.",
+      "Hago la tarea igual pero sin reportarlo."
+    ],
+    "c": 1,
+    "explicacion": "La seguridad nunca se negocia; los riesgos deben comunicarse y planificarse."
+  }
+]
